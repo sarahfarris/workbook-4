@@ -1,0 +1,100 @@
+Index: ../untitled/src/main/java/Calculator.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package PACKAGE_NAME;\r\n\r\npublic class Calculator {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../untitled/src/main/java/Calculator.java b/../untitled/src/main/java/Calculator.java
+--- a/../untitled/src/main/java/Calculator.java	(revision f74660da621e61e0edd8b6a0d3ee93cf3eceae40)
++++ b/../untitled/src/main/java/Calculator.java	(date 1746724620436)
+@@ -1,4 +1,2 @@
+-package PACKAGE_NAME;
+-
+ public class Calculator {
+ }
+Index: ../workbook-4/Unit_Testing/CalculatorTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Unit_Testing;\r\n\r\nimport static org.junit.jupiter.api.Assertions.*;\r\nclass CalculatorTest {\r\n\r\n    @org.junit.jupiter.api.Test\r\n    void addNumbers() {\r\n      }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../workbook-4/Unit_Testing/CalculatorTest.java b/../workbook-4/Unit_Testing/CalculatorTest.java
+--- a/../workbook-4/Unit_Testing/CalculatorTest.java	(revision f74660da621e61e0edd8b6a0d3ee93cf3eceae40)
++++ b/../workbook-4/Unit_Testing/CalculatorTest.java	(date 1746724454954)
+@@ -6,4 +6,8 @@
+     @org.junit.jupiter.api.Test
+     void addNumbers() {
+       }
++
++    @org.junit.jupiter.api.Test
++    void subtractNumbers() {
++      }
+ }
+\ No newline at end of file
+Index: ../workbook-4/Unit_Testing/Calculator.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Unit_Testing;\r\n\r\npublic class Calculator {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../workbook-4/Unit_Testing/Calculator.java b/../workbook-4/Unit_Testing/Calculator.java
+--- a/../workbook-4/Unit_Testing/Calculator.java	(revision f74660da621e61e0edd8b6a0d3ee93cf3eceae40)
++++ b/../workbook-4/Unit_Testing/Calculator.java	(date 1746723835215)
+@@ -1,4 +1,21 @@
+ package Unit_Testing;
+ 
+ public class Calculator {
++  double nr1 = 5;
++  double nr2 = 10;
++
++  public Calculator(double nr1, double nr2) {
++    this.nr1 = nr1;
++    this.nr2 = nr2;
++  }
++
++  public double addNumbers() {
++    double result = nr1 + nr2;
++    return result;
++  }
++
++  public double subtractNumbers() {
++    double result = nr1 - nr2;
++    return result;
++  }
+ }
+Index: ../workbook-4/workbook-4.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"WEB_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$\" isTestSource=\"false\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../workbook-4/workbook-4.iml b/../workbook-4/workbook-4.iml
+--- a/../workbook-4/workbook-4.iml	(revision f74660da621e61e0edd8b6a0d3ee93cf3eceae40)
++++ b/../workbook-4/workbook-4.iml	(date 1746723835595)
+@@ -7,5 +7,21 @@
+     </content>
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="module-library" scope="TEST">
++      <library name="JUnit5.8.1">
++        <CLASSES>
++          <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter/5.8.1/junit-jupiter-5.8.1.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.8.1/junit-jupiter-api-5.8.1.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.8.1/junit-platform-commons-1.8.1.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-params/5.8.1/junit-jupiter-params-5.8.1.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.8.1/junit-jupiter-engine-5.8.1.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.8.1/junit-platform-engine-1.8.1.jar!/" />
++        </CLASSES>
++        <JAVADOC />
++        <SOURCES />
++      </library>
++    </orderEntry>
+   </component>
+ </module>
+\ No newline at end of file
